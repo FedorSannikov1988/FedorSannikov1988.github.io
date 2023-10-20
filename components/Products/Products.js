@@ -185,7 +185,7 @@ class Prodicts {
         });
 
         const html = `
-            <div class= "products-container">
+            <div class= "products-container centering_container">
                 ${htmlCatalog}
             </div>
         `;

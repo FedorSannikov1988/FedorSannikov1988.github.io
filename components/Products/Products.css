@@ -1,3 +1,9 @@
+.centering_container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 486px;
+}
+
 .products-container {
     /*
     display: grid;
@@ -11,9 +17,7 @@
     grid-template-columns: repeat(2, 240px);
     grid-column-gap: 6px;
     grid-row-gap: 6px;
-    /*
-    padding-bottom: 100px;
-    */
+    padding-bottom: 200px;
 }
 
 .products-element {
