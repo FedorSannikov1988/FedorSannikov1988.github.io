@@ -154,12 +154,11 @@ class Prodicts {
             }
 
             htmlCatalog += `
-                <li class="products-element">
-                    <div class="test"> <span class="products-element__name">${name}</span> </div>
+                <div class="products-element">
+                    <div class="products-title"> <span class="products-title__text">${name}</span> </div>
                     <img class="products-element__img" src="${img}" />
                     <div> <span class="products-element__price">
-                    <b>Цена: </b>
-                    ${price.toLocaleString()} ₽
+                    Цена: ${price.toLocaleString()} ₽
                     <span> </div>
                     
                         <button id="${id}_add_card" class="${nowClassAddCardBigButton}" onclick="prodictsPage.handleSetLocationStorage(this, '${id}', ${id}_minus, ${id}_quantity, ${id}_plus);">
@@ -181,7 +180,7 @@ class Prodicts {
                         </button>
 
                     </div>
-                </li>
+                </div>
             `;
         });
 
