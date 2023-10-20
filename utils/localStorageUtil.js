@@ -20,7 +20,7 @@ class LocalStorageUtil {
             id: product_id,
             count: 1
             })
-   
+            
         } else {
 
             let product_index = -1;

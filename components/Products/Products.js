@@ -5,18 +5,35 @@ class Prodicts {
         this.classNameNotActive = 'products-element__btn_not_active';
     }
 
-    handleSetLocationStorage(this_element, id, button_minus, button_quantity, button_plus) {
-
-        let text = 'handleSetLocationStorage'
-
-        tg.MainButton.setText(text)
+    handleSetLocationStorage(this_element, id_prodict_add_card, button_minus, button_quantity, button_plus) {
         
-        tg.MainButton.show()
-        /*
-        let text = products.length.toString()
-        */
- 
-        localStorageUtil.putProducts(id);
+        localStorageUtil.putProducts(id_prodict_add_card);
+
+        let full_cost_order = 0;
+
+        const prodictsStore = localStorageUtil.getProducts();
+
+        prodictsStore.forEach(({ id, count }) => {
+
+            let id_prodict_store = id
+
+            CATALOG.forEach(({ id, price }) => {
+
+                if (id == id_prodict_store) {
+
+                    full_cost_order += count * price;
+                }
+
+            });
+        });
+
+        console.log('full_cost_order');
+        console.log(full_cost_order.toString());
+
+        let text = full_cost_order.toString() + '₽';
+        tg.MainButton.setText(text);
+
+        tg.MainButton.show();
         
         this_element.classList.toggle(this.classNameActive);
         this_element.classList.toggle(this.classNameNotActive);
@@ -51,6 +68,7 @@ class Prodicts {
         const quantity = parseInt(button_quantity.innerHTML);
 
         if (quantity > 1) {
+
             button_quantity.innerHTML = quantity - 1;
 
             let text = 'handleSetLocationStorageMinus'
