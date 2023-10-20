@@ -35,6 +35,8 @@ tg.MainButton.onClick( () => {
 
     tg.sendData(JSON.stringify(prodictsStore));
 
+    localStorageUtil.delAllProducts();
+
     tg.close();
 })
 

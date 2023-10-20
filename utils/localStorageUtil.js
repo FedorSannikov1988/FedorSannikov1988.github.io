@@ -20,7 +20,7 @@ class LocalStorageUtil {
             id: product_id,
             count: 1
             })
-            
+
         } else {
 
             let product_index = -1;
@@ -73,13 +73,15 @@ class LocalStorageUtil {
 
         return { products }
     }
+
+    delAllProducts() {
+
+        const products = [];
+         
+        localStorage.setItem(this.keyName, JSON.stringify(products));
+
+        return { products }
+    }
 }
 
 const localStorageUtil = new LocalStorageUtil();
-
-/*
-localStorageUtil.putProducts('el3');
-*/
-/*
-localStorageUtil.delProducts('el3');
-*/
