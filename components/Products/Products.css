@@ -50,6 +50,17 @@
     display: none;
 }
 
+.products-element__btn_quantity {
+    display: block;
+    margin-top: var(--spacing-medium);
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
 .wrapper_for_btn_set_quantity {
     display: flex;
     gap: 2px;

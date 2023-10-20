@@ -3,6 +3,7 @@ class Prodicts {
     constructor() {
         this.classNameActive = 'products-element__btn';
         this.classNameNotActive = 'products-element__btn_not_active';
+        this.classNameActiveQuantity = 'products-element__btn_quantity';
     }
 
     handleSetLocationStorage(this_element, id_prodict_add_card, button_minus, button_quantity, button_plus) {
@@ -28,7 +29,7 @@ class Prodicts {
         });
 
         const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
-        
+
         tg.MainButton.setText(text);
         
         tg.MainButton.show();
@@ -40,7 +41,7 @@ class Prodicts {
         button_minus.classList.toggle(this.classNameActive);
         
         button_quantity.classList.toggle(this.classNameNotActive);
-        button_quantity.classList.toggle(this.classNameActive);  
+        button_quantity.classList.toggle(this.classNameActiveQuantity);  
         button_quantity.innerHTML = 1;
         
         button_plus.classList.toggle(this.classNameNotActive);
@@ -116,7 +117,7 @@ class Prodicts {
             button_minus.classList.toggle(this.classNameActive);
             button_minus.classList.toggle(this.classNameNotActive);
 
-            button_quantity.classList.toggle(this.classNameActive);
+            button_quantity.classList.toggle(this.classNameActiveQuantity);
             button_quantity.classList.toggle(this.classNameNotActive); 
 
             button_plus.classList.toggle(this.classNameActive);
@@ -140,12 +141,14 @@ class Prodicts {
             let count = 0
             let nowClassAddCardBigButton = this.classNameActive;
             let nowClassSetQuantityInCard = this.classNameNotActive;
+            let nowClassSeeQuantity = this.classNameNotActive;
                         
             for (let i = 0; i < prodictsStore.length; i++) {
                 
                 if (prodictsStore[i].id == id) {
                     nowClassAddCardBigButton = this.classNameNotActive;
                     nowClassSetQuantityInCard = this.classNameActive;
+                    nowClassSeeQuantity = this.classNameActiveQuantity;
                     count = prodictsStore[i].count
                 }
             }
@@ -160,7 +163,7 @@ class Prodicts {
                     ₽<span>
                     
                         <button id="${id}_add_card" class="${nowClassAddCardBigButton}" onclick="prodictsPage.handleSetLocationStorage(this, '${id}', ${id}_minus, ${id}_quantity, ${id}_plus);">
-                        Добавить в корзину
+                        Купить
                         </button>
 
                     <div class="wrapper_for_btn_set_quantity">
@@ -169,7 +172,7 @@ class Prodicts {
                         -
                         </button>
                         
-                        <button id="${id}_quantity" class="${nowClassSetQuantityInCard}">
+                        <button id="${id}_quantity" class="${nowClassSeeQuantity}">
                         ${count}
                         </button>
 
