@@ -27,10 +27,7 @@ class Prodicts {
             });
         });
 
-        console.log('full_cost_order');
-        console.log(full_cost_order.toString());
-
-        let text = full_cost_order.toString() + '₽';
+        const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
         tg.MainButton.setText(text);
 
         tg.MainButton.show();
@@ -49,13 +46,31 @@ class Prodicts {
         button_plus.classList.toggle(this.classNameActive);
     }
 
-    handleSetLocationStoragePlus(id, button_quantity) {
-        
-        let text = 'handleSetLocationStoragePlus'
-
-        tg.MainButton.setText(text)
+    handleSetLocationStoragePlus(id, button_quantity) {       
         
         localStorageUtil.putProducts(id);
+
+        let full_cost_order = 0;
+
+        const prodictsStore = localStorageUtil.getProducts();
+
+        prodictsStore.forEach(({ id, count }) => {
+
+            let id_prodict_store = id
+
+            CATALOG.forEach(({ id, price }) => {
+
+                if (id == id_prodict_store) {
+
+                    full_cost_order += count * price;
+                }
+
+            });
+        });
+
+        const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
+
+        tg.MainButton.setText(text)
         
         button_quantity.innerHTML = parseInt(button_quantity.innerHTML) + 1;
         
@@ -71,9 +86,27 @@ class Prodicts {
 
             button_quantity.innerHTML = quantity - 1;
 
-            let text = 'handleSetLocationStorageMinus'
+            let full_cost_order = 0;
 
-            tg.MainButton.setText(text)
+            const prodictsStore = localStorageUtil.getProducts();
+    
+            prodictsStore.forEach(({ id, count }) => {
+    
+                let id_prodict_store = id
+    
+                CATALOG.forEach(({ id, price }) => {
+    
+                    if (id == id_prodict_store) {
+    
+                        full_cost_order += count * price;
+                    }
+    
+                });
+            });
+    
+            const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
+            
+            tg.MainButton.setText(text);
 
         } else {
             
@@ -89,7 +122,6 @@ class Prodicts {
             button_plus.classList.toggle(this.classNameActive);
             button_plus.classList.toggle(this.classNameNotActive);
             
-
             const prodictsStore = localStorageUtil.getProducts();
 
             if (prodictsStore.length === 0) {
