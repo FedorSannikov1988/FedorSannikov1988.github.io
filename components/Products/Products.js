@@ -21,7 +21,7 @@ class Prodicts {
 
                 if (id == id_prodict_store) {
 
-                    full_cost_order += count * price;
+                    full_cost_order += (count * price);
                 }
 
             });
@@ -62,51 +62,50 @@ class Prodicts {
 
                 if (id == id_prodict_store) {
 
-                    full_cost_order += count * price;
+                    full_cost_order += (count * price);
                 }
 
             });
         });
 
-        const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
-
-        tg.MainButton.setText(text)
-        
         button_quantity.innerHTML = parseInt(button_quantity.innerHTML) + 1;
         
+        const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
+
+        tg.MainButton.setText(text);
     }
 
     handleSetLocationStorageMinus(button_add_card, id, button_minus, button_quantity, button_plus) { 
         
         localStorageUtil.delProducts(id);
 
+        let full_cost_order = 0;
+
+        const prodictsStore = localStorageUtil.getProducts();
+
+        prodictsStore.forEach(({ id, count }) => {
+
+            let id_prodict_store = id
+
+            CATALOG.forEach(({ id, price }) => {
+
+                if (id == id_prodict_store) {
+
+                    full_cost_order += (count * price);
+                }
+
+            });
+        });
+
+        const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
+        
+        tg.MainButton.setText(text);
+
         const quantity = parseInt(button_quantity.innerHTML);
 
         if (quantity > 1) {
 
             button_quantity.innerHTML = quantity - 1;
-
-            let full_cost_order = 0;
-
-            const prodictsStore = localStorageUtil.getProducts();
-    
-            prodictsStore.forEach(({ id, count }) => {
-    
-                let id_prodict_store = id
-    
-                CATALOG.forEach(({ id, price }) => {
-    
-                    if (id == id_prodict_store) {
-    
-                        full_cost_order += count * price;
-                    }
-    
-                });
-            });
-    
-            const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
-            
-            tg.MainButton.setText(text);
 
         } else {
             
