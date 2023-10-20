@@ -29,15 +29,25 @@ const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
 
 tg.MainButton.setText(text)
 
+tg.MainButton.onClick( () => {
 
+    const prodictsStore = localStorageUtil.getProducts();
+
+    tg.sendData(JSON.stringify(prodictsStore));
+
+    tg.close();
+})
+
+/*
 Telegram.WebApp.onEvent('mainButtonClicked', function() {
-    
+
     const prodictsStore = localStorageUtil.getProducts();
 
     tg.sendData(JSON.stringify(prodictsStore));
 
     tg.close();
 });
+*/
 
 
 /*
