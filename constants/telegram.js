@@ -30,6 +30,22 @@ const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
 tg.MainButton.setText(text)
 
 
+Telegram.WebApp.onEvent('mainButtonClicked', function() {
+    
+    const prodictsStore = localStorageUtil.getProducts();
+
+    tg.sendData(JSON.stringify(prodictsStore));
+
+    tg.close();
+});
+
+
+/*
+tg.sendData(JSON.stringify(data));
+
+tg.close();
+*/
+
 /*
     let text = products.length.toString()
 
