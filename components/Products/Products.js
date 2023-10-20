@@ -30,6 +30,8 @@ class Prodicts {
         const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
         tg.MainButton.setText(text);
 
+        tg.MainButton.color = "#143F6B";
+
         tg.MainButton.show();
         
         this_element.classList.toggle(this.classNameActive);

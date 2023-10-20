@@ -28,6 +28,7 @@
 .products-element__price {
     margin-top: var(--spacing-medium);
     color: var(--color-unaccent);
+    color: rgb(70, 180, 70);
 }
 .products-element__btn {
     display: block;

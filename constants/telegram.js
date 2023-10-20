@@ -2,7 +2,7 @@ let tg = window.Telegram.WebApp;
 
 tg.expand();
 
-tg.MainButton.color = "00СС00";
+tg.MainButton.color = "#143F6B";
 
 const prodictsStore = localStorageUtil.getProducts();
 
