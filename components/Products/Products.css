@@ -28,7 +28,6 @@
 .products-element__price {
     margin-top: var(--spacing-medium);
     color: var(--color-unaccent);
-    color: rgb(70, 180, 70);
 }
 .products-element__btn {
     display: block;
@@ -43,8 +42,8 @@
     font-size: inherit;
 }
 
-.products-element__btn:hover {
-    background: rgb(119, 128, 116);
+.products-element__btn:active {
+    background: rgb(87, 177, 57);
 }
 
 .products-element__btn_not_active {

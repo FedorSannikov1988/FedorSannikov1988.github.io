@@ -28,12 +28,9 @@ class Prodicts {
         });
 
         const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
+        
         tg.MainButton.setText(text);
-        /*
-
-        tg.MainButton.color = "#4CBB17";
-        */
-
+        
         tg.MainButton.show();
         
         this_element.classList.toggle(this.classNameActive);
