@@ -185,9 +185,9 @@ class Prodicts {
         });
 
         const html = `
-            <ul class= "products-container">
+            <div class= "products-container">
                 ${htmlCatalog}
-            </ul>
+            </div>
         `;
 
         ROOT_PRODUCTS.innerHTML = html;
