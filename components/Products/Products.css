@@ -34,8 +34,17 @@
 }
 
 .products-element__name {
+    
     margin-bottom: auto;
+    
     font-weight: bold;
+
+}
+
+.test {
+    text-align: center;
+    height: 55px;
+
 }
 
 .products-element__img {
