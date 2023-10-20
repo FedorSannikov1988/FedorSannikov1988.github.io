@@ -2,16 +2,33 @@ let tg = window.Telegram.WebApp;
 
 tg.expand();
 
-const products = localStorageUtil.getProducts();
+const prodictsStore = localStorageUtil.getProducts();
 
-if (products.length > 0) {
+if (prodictsStore.length > 0) {
 
     tg.MainButton.show()
 }
 
-let text = 'telegram'
+let full_cost_order = 0;
+
+prodictsStore.forEach(({ id, count }) => {
+
+    let id_prodict_store = id
+
+    CATALOG.forEach(({ id, price }) => {
+
+        if (id == id_prodict_store) {
+
+            full_cost_order += count * price;
+        }
+
+    });
+});
+
+const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
 
 tg.MainButton.setText(text)
+
 
 /*
     let text = products.length.toString()
