@@ -157,10 +157,12 @@ class Prodicts {
                 <li class="products-element">
                     <span class="products-element__name">${name}</span>
                     <img class="products-element__img" src="${img}" />
+                    <div>
                     <span class="products-element__price">
                     <b>Цена: </b>
-                    ${price.toLocaleString()} 
-                    ₽<span>
+                    ${price.toLocaleString()} ₽
+                    <span>
+                    </div>
                     
                         <button id="${id}_add_card" class="${nowClassAddCardBigButton}" onclick="prodictsPage.handleSetLocationStorage(this, '${id}', ${id}_minus, ${id}_quantity, ${id}_plus);">
                         Купить
