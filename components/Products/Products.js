@@ -155,7 +155,7 @@ class Prodicts {
 
             htmlCatalog += `
                 <div class="products-element">
-                    <div class="products-title"> <span class="products-title__text">${name}</span> </div>
+                    <div class="products-title"> <p class="products-title__text">${name}</p> </div>
                     <img class="products-element__img" src="${img}" />
                     <div> <span class="products-element__price">
                     Цена: ${price.toLocaleString()} ₽
@@ -185,7 +185,7 @@ class Prodicts {
         });
 
         const html = `
-            <div class= "products-container centering_container">
+            <div class= "products-container centering">
                 ${htmlCatalog}
             </div>
         `;

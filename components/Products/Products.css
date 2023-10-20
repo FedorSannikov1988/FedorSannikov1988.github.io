@@ -1,4 +1,4 @@
-.centering_container {
+.centering {
     margin-left: auto;
     margin-right: auto;
     width: 486px;
@@ -14,10 +14,11 @@
     margin: var(--spacing-large) auto;
     */
     display: grid;
-    grid-template-columns: repeat(2, 240px);
+    grid-template-columns: repeat(2, 200px);
     grid-column-gap: 6px;
     grid-row-gap: 6px;
-    padding-bottom: 200px;
+    padding-top: 50px;
+    padding-bottom: 450px;
 }
 
 .products-element {
@@ -33,15 +34,22 @@
 .products-title {
     text-align: center;
     min-height: 55px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .products-title__text {
+    font-size: 14px;
+    line-height: 100%;
     font-weight: bold;
 }
 
 .products-element__img {
-    width: 100%;
+    width: 50%;
+    /*
     height: 270px;
+    */
+    height: 175px;
     margin-top: var(--spacing-medium);
     object-fit: contain;
 }
