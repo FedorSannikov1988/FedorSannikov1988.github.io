@@ -136,7 +136,7 @@ class Prodicts {
 
         let htmlCatalog = '';
         
-        CATALOG.forEach(({ id, name, price, img }) => {
+        CATALOG.forEach(({ id, name, description, price, img }) => {
             
             let count = 0
             let nowClassAddCardBigButton = this.classNameActive;
@@ -157,6 +157,11 @@ class Prodicts {
                 <div class="products-element">
                     <div class="products-title"> <p class="products-title__text">${name}</p> </div>
                     <img class="products-element__img" src="${img}" />
+
+                    <p class="products-element__description">
+                    ${description}
+                    </p> 
+
                     <div> <span class="products-element__price">
                     Цена: ${price.toLocaleString()} ₽
                     <span> </div>

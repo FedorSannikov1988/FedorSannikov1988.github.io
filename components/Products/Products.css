@@ -43,6 +43,17 @@
     object-fit: contain;
 }
 
+.products-element__description {
+    text-align: justify;
+    font-size: var(--text-size);
+    color: var(--color-unaccent);
+    line-height: 110%;
+    margin: 0;
+    height: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .products-element__price {
     font-size: var(--text-size);
     font-weight: bold;
@@ -59,8 +70,6 @@
     cursor: pointer;
     outline: none;
     background: none;
-    font-family: inherit;
-    font-size: inherit;
     font-size: var(--text-size);
 }
 
