@@ -9,7 +9,6 @@
     grid-template-columns: repeat(2, 180px);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    padding-top: 50px;
     padding-bottom: 70px;
 }
 

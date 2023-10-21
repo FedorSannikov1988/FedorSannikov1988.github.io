@@ -200,5 +200,3 @@ class Prodicts {
 }
 
 const prodictsPage = new Prodicts();
-
-prodictsPage.render();

@@ -50,14 +50,14 @@ const CATALOG = [
     },
     {
         id: 'el7',
-        name: 'Греческий',
+        name: 'Салат Греческий',
         description: 'Сыр фета, болгарский перец, томаты, огурцы, фриллис, маслины, красный лук, соус, кунжут. Вес: 240 гр.',
         img: 'img/catalog/greek_salad.jpg',
         price: 290,
     },
     {
         id: 'el8',
-        name: 'Чука',
+        name: 'Салат Чука',
         description: 'Водоросли чука, ореховый соус, кунжут. Вес: 220 гр.',
         img: 'img/catalog/сhuka_salad.jpg',
         price: 290,
