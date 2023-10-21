@@ -2,10 +2,11 @@ function render() {
 
     prodictsPage.render();
 }
-
-render();
-
 /*
+render();
+*/
+
+
 let CATALOG = [];
 
 render();
@@ -18,4 +19,3 @@ fetch('server/catalog.json')
 .catch( error => {
     console.log(error);
 });
-*/
