@@ -9,8 +9,8 @@ const forMax = STOP_DATA;
 /*
 создаем данные для формы type="date" для демонстрационной версии:
 */
-
-const TIMERESERVEHOURS = 1;
+let tg = window.Telegram.WebApp;
+const TIMERESERVEHOURS = 2;
 
 const dateForFormDateDelivery = new Date(Date.now());
 const forValueAndMin = dateForFormDateDelivery.toISOString().substring(0, 10);
@@ -122,8 +122,19 @@ document.getElementById('form_time_delivery').addEventListener('submit', functio
     document.getElementById("date_and_time_delivery").innerHTML = `
     Дата доставки: ${localStorage.getItem('delivery_date')}
     Время доставки: ${localStorage.getItem('delivery_time')}
+    Сумма заказа: ${localStorage.getItem('delivery_time')} ₽
     `;
+    /*
+    
+    tg.MainButton.color = "#4CBB17";
+    */
 
+    tg.MainButton.show();
+
+    const text = 'Сделать заказ';
+
+    tg.MainButton.setText(text);
+    
   }
 
 });
