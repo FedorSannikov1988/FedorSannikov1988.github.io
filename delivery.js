@@ -10,6 +10,9 @@ const forMax = STOP_DATA;
 создаем данные для формы type="date" для демонстрационной версии:
 */
 let tg = window.Telegram.WebApp;
+
+tg.MainButton.hide();
+
 const TIMERESERVEHOURS = 2;
 
 const dateForFormDateDelivery = new Date(Date.now());
@@ -134,7 +137,7 @@ document.getElementById('form_time_delivery').addEventListener('submit', functio
     const text = 'Сделать заказ';
 
     tg.MainButton.setText(text);
-    
+
   }
 
 });
