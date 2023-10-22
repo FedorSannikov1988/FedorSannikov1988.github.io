@@ -1,0 +1,28 @@
+.form {
+    /*
+    background-color: rgb(150,75,0);
+    */
+    
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    
+    /*
+    box-shadow: var(--box-shadow);
+    */
+    width: 300px;
+  }
+
+  .rounded-input {
+    padding:10px;
+    border-radius:10px;
+  }
+/*
+  input {
+    width:30%;
+  }
+*/
+  input, textarea {
+    font-family:inherit;
+    font-size: inherit;
+  }

@@ -1,19 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="png" href="img/favicon.png">
+    <link rel="stylesheet" href="./css/delivery.css">
     <title>Date and Time of delivery</title>
 </head>
 <body>
-
-    <form>
-        <p>Выберите дату: 
-        <input type="date" name="calendar" value="2012-06-01"
-            max="2012-06-04" min="2012-05-29">
-        <input type="submit" value="Отправить">
-        </p>
-    </form>
         
+        <a href="index.html">Вернуться в меню</a>
+
+        <form id="form_date_delivery" class="form">
+            <p>Выберите дату доставки</p>
+            <input id="date_delivery_input" class="rounded-input" type="date" name="calendar" >
+            <button type="submit">Выбрать</button>
+        </form>
+
+        <p id="error_message"> </p>
+
+        <br>
+
+        <form id="form_time_delivery" class="form">
+            <p>Выберите время доставки</p>
+                <select name="list_time"></select>
+                <button type="submit">Выбрать</button>
+        </form>
+
+        <p id="date_and_time_delivery"> </p>
+
+<!-- Server simulation -->
+<script src="imitation_server/delivery_data_time.js"></script>
+
+<!-- Forms -->
+<script src="delivery.js"></script>
+
 </body>
 </html>
