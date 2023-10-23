@@ -32,17 +32,7 @@ const text = 'Заказать: ' + full_cost_order.toString() + ' ₽';
 tg.MainButton.setText(text)
 
 tg.MainButton.onClick( () => {
-
+    
     window.location.href = 'https://fedorsannikov1988.github.io/delivery.html';
-
-    /*
-
-    const prodictsStore = localStorageUtil.getProducts();
-
-    tg.sendData(JSON.stringify(prodictsStore));
-
-    localStorageUtil.delAllProducts();
-
-    tg.close();
-    */
+    
 })

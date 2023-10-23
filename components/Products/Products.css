@@ -24,7 +24,7 @@
 }
 
 .products-title__text {
-    font-size: var(--text-size);
+    font-size: var(--text-size-index);
     line-height: 100%;
     font-weight: bold;
 }
@@ -38,7 +38,7 @@
 
 .products-element__description {
     text-align: justify;
-    font-size: var(--text-size);
+    font-size: var(--text-size-index);
     color: var(--color-unaccent);
     line-height: 110%;
     margin: 0;
@@ -48,7 +48,7 @@
 }
 
 .products-element__price {
-    font-size: var(--text-size);
+    font-size: var(--text-size-index);
     font-weight: bold;
     margin-top: var(--spacing-medium);
     color: var(--color-unaccent);
@@ -63,7 +63,7 @@
     cursor: pointer;
     outline: none;
     background: none;
-    font-size: var(--text-size);
+    font-size: var(--text-size-index);
 }
 
 .products-element__btn:active {
@@ -83,7 +83,7 @@
     background: none;
     font-family: inherit;
     font-size: inherit;
-    font-size: var(--text-size);
+    font-size: var(--text-size-index);
 }
 
 .wrapper_for_btn_set_quantity {

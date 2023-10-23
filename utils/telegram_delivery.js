@@ -3,18 +3,24 @@ let tg = window.Telegram.WebApp;
 tg.MainButton.onClick( () => {
 
     const yearMonthDay = localStorage.getItem('delivery_date').split('-');
+
     localStorage.setItem('delivery_date', []);
 
-    const deliveryData = yearMonthDay[2] + '.' + yearMonthDay[1] + '.' + yearMonthDay[0];
+    const deliveryData = 'delivery_date:' + yearMonthDay[2] + '.' + yearMonthDay[1] + '.' + yearMonthDay[0];
     
-    const deliveryTime = localStorage.getItem('delivery_time');
+    const deliveryTime = 'delivery_time:' + localStorage.getItem('delivery_time');
+
     localStorage.setItem('delivery_time', []);
 
     const prodictsStore = localStorageUtil.getProducts();
-
-    tg.sendData(JSON.stringify(prodictsStore));
-
+    
     localStorageUtil.delAllProducts();
+
+    const shippingCost = 'shipping_cost:' + '150';
+
+    const dateForSent= JSON.stringify(prodictsStore) + shippingCost + deliveryData + deliveryTime;
+    
+    tg.sendData(dateForSent);   
 
     tg.close();
 })

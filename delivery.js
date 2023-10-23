@@ -9,9 +9,6 @@ const forMax = STOP_DATA;
 /*
 создаем данные для формы type="date" для демонстрационной версии:
 */
-/*
-let tg = window.Telegram.WebApp;
-*/
 
 tg.MainButton.hide();
 
@@ -31,13 +28,11 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
   element.preventDefault(); 
 
   const chooseData = new FormData(this);
-  const DataChooseUser = chooseData.get('calendar');
+  const dataChooseUser = chooseData.get('calendar');
 
-  console.log(DataChooseUser);
+  localStorage.setItem('delivery_date', dataChooseUser);
 
-  localStorage.setItem('delivery_date', DataChooseUser);
-
-  if (forValueAndMin == DataChooseUser) {
+  if (forValueAndMin == dataChooseUser) {
 
   const max_time_and_date = TIME_DELIVERY[TIME_DELIVERY.length - 1].split(':');
 
@@ -65,6 +60,7 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
       const now = new Date();
 
       const selectElement = document.createElement("select");
+
       selectElement.classList.toggle('select_time_delivery');
 
       selectElement.name = "list_time";
@@ -75,7 +71,7 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
 
         const forСomparison = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hoursAndMinutes[0], hoursAndMinutes[1], 0);
 
-        if (forСomparison > now) {
+        if (forСomparison >= nearestDeliveryTime) {
 
           const optionElement = document.createElement("option");
           optionElement.value = time;
@@ -94,6 +90,7 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
   } else {
 
     const selectElement = document.createElement("select");
+
     selectElement.classList.toggle('select_time_delivery');
 
     selectElement.name = "list_time";
@@ -108,7 +105,7 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
     });
 
     document.getElementById("error_message").innerHTML = ``;
-    
+
     document.querySelector('[name=list_time]').replaceWith(selectElement);
   }
 });
@@ -168,5 +165,5 @@ document.getElementById('form_time_delivery').addEventListener('submit', functio
 
     tg.MainButton.show();
   }
-
+  
 });

@@ -1,6 +1,6 @@
 .title_delivery {
   display: flex;
-  font-size: 20px;
+  font-size: var(--text-size-delivery);
   height: 50px;
   flex-direction: column;
   align-items: center;
@@ -31,16 +31,17 @@
 
 .title_form {
   margin: 0;
-  font-size: 20px;
-  padding-bottom: 15px;
+  font-size: var(--text-size-delivery);
+  padding-bottom: var(--indent-down-elements-form);
   font-weight: bold;
 }
 
 .input_date {
   padding:10px;
-  border-radius:10px;
-  font-size: 20px;
-  margin-bottom: 15px;
+  border-radius: var(--border-radius-input-date-and-time);
+  font-size: var(--text-size-delivery);
+  margin-bottom: var(--indent-down-elements-form);
+  text-align: center;
 }
 
 .button_for_form_delivery {
@@ -51,7 +52,7 @@
   cursor: pointer;
   outline: none;
   background: none;
-  font-size: 20px;
+  font-size: var(--text-size-delivery);
 }
 
 .button_for_form_delivery:active {
@@ -60,13 +61,11 @@
 
 .select_time_delivery {
   width: 150px;
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: var(--text-size-delivery);
+  margin-bottom: var(--indent-down-elements-form);
   text-align: center;
-  
   padding:10px;
-  
-  border-radius:10px;
+  border-radius: var(--border-radius-input-date-and-time);
 }
 
 .wrapper_for_error_message {
@@ -77,6 +76,6 @@
 .error_message_not_time {
   color: crimson;
   text-align: center;
-  font-size: 20px;
+  font-size: var(--text-size-delivery);
   font-weight: bold;
 }

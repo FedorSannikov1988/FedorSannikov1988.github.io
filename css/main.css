@@ -13,7 +13,10 @@
 		0 6px 30px 5px rgba(33,37,41,.04), 
 		0 8px 10px -5px rgba(33,37,41,.1);
     
-    --text-size: 11px;
+    --text-size-index: 11px;
+    --text-size-delivery: 20px;
+    --border-radius-input-date-and-time: 10px;
+    --indent-down-elements-form: 15px;
 }
 
 * {
