@@ -16,15 +16,18 @@ tg.MainButton.hide();
 
 const TIME_RESERVE_HOURS = 2;
 
+function createDateInDesiredFormat(dateForFormDateDelivery) {
+  const dateInDesiredFormat = dateForFormDateDelivery.toLocaleDateString().split('.');
+  return dateInDesiredFormat[2] + '-' + dateInDesiredFormat[1] + '-' + dateInDesiredFormat[0];
+}
+
 const dateForFormDateDelivery = new Date(Date.now());
 
-let dateInDesiredFormat = dateForFormDateDelivery.toLocaleDateString().split('.');
-const forValueAndMin = dateInDesiredFormat[2] + '-' + dateInDesiredFormat[1] + '-' + dateInDesiredFormat[0];
+const forValueAndMin = createDateInDesiredFormat(dateForFormDateDelivery);
 
 dateForFormDateDelivery.setDate(dateForFormDateDelivery.getDate() + 6);
 
-dateInDesiredFormat = dateForFormDateDelivery.toLocaleDateString().split('.');
-const forMax = dateInDesiredFormat[2] + '-' + dateInDesiredFormat[1] + '-' + dateInDesiredFormat[0];
+const forMax = createDateInDesiredFormat(dateForFormDateDelivery);
 
 document.getElementById("date_delivery_input").value = forValueAndMin;
 document.getElementById("date_delivery_input").min = forValueAndMin;
@@ -48,8 +51,6 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
   const nearestDeliveryTime = new Date();
 
   nearestDeliveryTime.setHours(now.getHours() + TIME_RESERVE_HOURS);
-
-  console.log(forСomparison <= nearestDeliveryTime); 
 
     if (forСomparison <= nearestDeliveryTime) {
 
