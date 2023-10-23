@@ -20,7 +20,7 @@ tg.MainButton.onClick( () => {
 
     const products = JSON.stringify(prodictsStore);
 
-    const dateForSent = products.substring(0, products.length - 3) + ',' + shippingCost + ',' + deliveryData + ',' + deliveryTime + '}]';
+    const dateForSent = products.substring(0, products.length - 2) + ',' + shippingCost + ',' + deliveryData + ',' + deliveryTime + '}]';
     
     tg.sendData(dateForSent);   
 

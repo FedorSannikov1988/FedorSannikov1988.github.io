@@ -1,15 +1,17 @@
+/* 
+Almost the entire script below is an imitation of 
+receiving a delivery schedule from a third-party 
+service and was written for the demo version of 
+the application
+*/
+
 /*
-загружаем данные для формы type="date" с имитации сервера:
+Uploading data for the type="date" form from a server simulation:
 */
 /*
 const forValueAndMin = START_DATA;
 const forMax = STOP_DATA;
 */
-
-/*
-создаем данные для формы type="date" для демонстрационной версии:
-*/
-
 tg.MainButton.hide();
 
 const TIMERESERVEHOURS = 2;
@@ -165,5 +167,5 @@ document.getElementById('form_time_delivery').addEventListener('submit', functio
 
     tg.MainButton.show();
   }
-  
+
 });
