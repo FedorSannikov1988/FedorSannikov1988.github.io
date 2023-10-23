@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="png" href="img/favicon.png">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/delivery.css">
     <title>Date and Time of delivery</title>
 </head>
 <body>
-        
-        <a href="index.html">Вернуться в меню</a>
 
-        <form id="form_date_delivery" class="form">
-            <p>Выберите дату доставки</p>
-            <input id="date_delivery_input" class="rounded-input" type="date" name="calendar" >
-            <button type="submit">Выбрать</button>
-        </form>
+    <header > 
+        <h1 class="title_delivery centering">
+            <a class="title_delivery_text_link" href="index.html"><b>Вернуться в меню</b></a>
+        </h1>
+    </header>
 
-        <p id="error_message"> </p>
+    <form id="form_date_delivery" class="form centering">
+        <div class="wrapper_for_form">
+            <p class="title_form">Выберите дату доставки</p>
+            <input id="date_delivery_input" class="input_date" type="date" name="calendar" >
+            <button class="button_for_form_delivery" type="submit">Выбрать</button>
+        </div>
+    </form>
 
-        <br>
+    <br>
+    <div class="wrapper_for_error_message centering">
+        <p id="error_message" class="error_message_not_time"></p>
+    </div>    
+    <br>
 
-        <form id="form_time_delivery" class="form">
-            <p>Выберите время доставки</p>
-                <select name="list_time"></select>
-                <button type="submit">Выбрать</button>
-        </form>
+    <form id="form_time_delivery" class="form centering">
+        <div class="wrapper_for_form">
+            <p class="title_form">Выберите время доставки</p>
+            <select class="select_time_delivery" name="list_time"></select>
+            <button class="button_for_form_delivery" type="submit">Выбрать</button>
+        </div>       
+    </form>
 
-        <p id="date_and_time_delivery"> </p>
+    <br>
+    <div class="wrapper_for_error_message centering">
+        <p id="date_and_time_delivery" class="error_message_not_time"></p>
+    </div>    
+    <br>
+
 
 <!-- Telegram WebApp -->
 <script src="https://telegram.org/js/telegram-web-app.js"></script>

@@ -1,9 +1,3 @@
-.centering {
-    margin-left: auto;
-    margin-right: auto;
-    width: 375px;
-}
-
 .products-container {
     display: grid;
     grid-template-columns: repeat(2, 180px);

@@ -1,28 +1,85 @@
-.form {
-    /*
-    background-color: rgb(150,75,0);
-    */
-    
-    padding:10px;
-    border:0;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-    
-    /*
-    box-shadow: var(--box-shadow);
-    */
-    width: 300px;
-  }
+.title_delivery {
+  display: flex;
+  font-size: 20px;
+  height: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .rounded-input {
-    padding:10px;
-    border-radius:10px;
-  }
-/*
-  input {
-    width:30%;
-  }
-*/
-  input, textarea {
-    font-family:inherit;
-    font-size: inherit;
-  }
+.title_delivery_text_link {
+  text-decoration: none;
+  color: black;
+}
+
+.title_delivery_text_link:active {
+  color: crimson;
+}
+
+.form {
+  border: 0; 
+  box-shadow: var(--box-shadow);
+  padding: 15px;
+  width: 330px;
+}
+
+.wrapper_for_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title_form {
+  margin: 0;
+  font-size: 20px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.input_date {
+  padding:10px;
+  border-radius:10px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.button_for_form_delivery {
+  display: block;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: 1px solid var(--color-unaccent);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  outline: none;
+  background: none;
+  font-size: 20px;
+}
+
+.button_for_form_delivery:active {
+  background: rgb(51, 180, 8);
+}
+
+.select_time_delivery {
+  width: 150px;
+  /*
+  height: 30px;
+  */
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  
+  padding:10px;
+  
+  border-radius:10px;
+}
+
+.wrapper_for_error_message {
+  display: flex;
+  width: 330px;
+}
+
+.error_message_not_time {
+  color: crimson;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}

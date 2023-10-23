@@ -63,6 +63,10 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
       const now = new Date();
 
       const selectElement = document.createElement("select");
+      selectElement.classList.toggle('select_time_delivery');
+      /*
+      selectElement.class = "select_time_delivery";
+      */
       selectElement.name = "list_time";
      
       TIME_DELIVERY.forEach(time => {
@@ -90,6 +94,10 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
   } else {
 
     const selectElement = document.createElement("select");
+    selectElement.classList.toggle('select_time_delivery');
+    /*
+    selectElement.class = "select_time_delivery";
+    */
     selectElement.name = "list_time";
 
     TIME_DELIVERY.forEach( time => {
@@ -127,13 +135,12 @@ document.getElementById('form_time_delivery').addEventListener('submit', functio
     Время доставки: ${localStorage.getItem('delivery_time')}
     Сумма заказа: ${localStorage.getItem('delivery_time')} ₽
     `;
-    /*
+    
     
     tg.MainButton.color = "#4CBB17";
-    */
 
     tg.MainButton.show();
-
+    
     const text = 'Сделать заказ';
 
     tg.MainButton.setText(text);
