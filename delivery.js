@@ -17,9 +17,14 @@ tg.MainButton.hide();
 const TIME_RESERVE_HOURS = 2;
 
 const dateForFormDateDelivery = new Date(Date.now());
-const forValueAndMin = dateForFormDateDelivery.toISOString().substring(0, 10);
+
+let dateInDesiredFormat = dateForFormDateDelivery.toLocaleDateString().split('.');
+const forValueAndMin = dateInDesiredFormat[2] + '-' + dateInDesiredFormat[1] + '-' + dateInDesiredFormat[0];
+
 dateForFormDateDelivery.setDate(dateForFormDateDelivery.getDate() + 6);
-const forMax = dateForFormDateDelivery.toISOString().substring(0, 10);
+
+dateInDesiredFormat = dateForFormDateDelivery.toLocaleDateString().split('.');
+const forMax = dateInDesiredFormat[2] + '-' + dateInDesiredFormat[1] + '-' + dateInDesiredFormat[0];
 
 document.getElementById("date_delivery_input").value = forValueAndMin;
 document.getElementById("date_delivery_input").min = forValueAndMin;
@@ -43,16 +48,6 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
   const nearestDeliveryTime = new Date();
 
   nearestDeliveryTime.setHours(now.getHours() + TIME_RESERVE_HOURS);
-
-  console.log(forСomparison.toString());
-
-  document.getElementById("selected_date_delivery").innerHTML = `${now.toString()}`;
-  
-  document.getElementById("order_amount").innerHTML = `${forСomparison.toString()}`;
-
-  console.log(nearestDeliveryTime.toString());
-
-  document.getElementById("shipping_cost").innerHTML = `${nearestDeliveryTime.toString()}`;
 
   console.log(forСomparison <= nearestDeliveryTime); 
 
