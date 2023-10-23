@@ -18,19 +18,21 @@
 - Инструмент разработки: Visual Studio Code;
 - Версионный контроль: Git.
 
+<br>
 
-<details><summary><strong>Пример работы (внешний вид в Telegram WebApp):</strong></summary>
+<details><summary><b>Пример работы (внешний вид в Telegram WebApp):</b></strong></summary>
 
 #### index:
 
-![внешний вид index](/pictures/ "внешний вид index")
+![внешний вид index](/pictures/index.jpg "внешний вид index")
 
 #### delivery:
 
-![внешний вид delivery](/pictures/ "внешний вид delivery")
+![внешний вид delivery](/pictures/delivery.jpg "внешний вид delivery")
 
 </details>
 
+<br>
 
 ### Размещение:
 - <a href="https://fedorsannikov1988.github.io/index.html">index</a>;

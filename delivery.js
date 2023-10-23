@@ -5,6 +5,10 @@ service and was written for the demo version of
 the application
 */
 
+tg.MainButton.hide();
+
+const TIME_RESERVE_HOURS = 2;
+
 /*
 Uploading data for the type="date" form from a server simulation:
 */
@@ -12,9 +16,11 @@ Uploading data for the type="date" form from a server simulation:
 const forValueAndMin = START_DATA;
 const forMax = STOP_DATA;
 */
-tg.MainButton.hide();
 
-const TIME_RESERVE_HOURS = 2;
+/* 
+or you can do this to simulate the work (request for the date 
+and time of delivery from the server)
+*/
 
 function createDateInDesiredFormat(dateForFormDateDelivery) {
   const dateInDesiredFormat = dateForFormDateDelivery.toLocaleDateString().split('.');
