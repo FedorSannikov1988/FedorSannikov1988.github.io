@@ -36,13 +36,23 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
 
   if (forValueAndMin == dataChooseUser) {
 
-  const max_time_and_date = TIME_DELIVERY[TIME_DELIVERY.length - 1].split(':');
+  const maxTimeAndDate = TIME_DELIVERY[TIME_DELIVERY.length - 1].split(':');
 
   const now = new Date();
-  const forСomparison = new Date(now.getFullYear(), now.getMonth(), now.getDate(), max_time_and_date[0], max_time_and_date[1], 0);
+  const forСomparison = new Date(now.getFullYear(), now.getMonth(), now.getDate(), maxTimeAndDate[0], maxTimeAndDate[1], 0);
   const nearestDeliveryTime = new Date();
 
   nearestDeliveryTime.setHours(now.getHours() + TIME_RESERVE_HOURS);
+
+  console.log(forСomparison.toString());
+  
+  document.getElementById("order_amount").innerHTML = `${forСomparison.toString()}`;
+
+  console.log(nearestDeliveryTime.toString());
+
+  document.getElementById("shipping_cost").innerHTML = `${nearestDeliveryTime.toString()}`;
+
+  console.log(forСomparison <= nearestDeliveryTime); 
 
     if (forСomparison <= nearestDeliveryTime) {
 
