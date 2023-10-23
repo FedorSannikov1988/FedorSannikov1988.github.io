@@ -45,6 +45,8 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
   nearestDeliveryTime.setHours(now.getHours() + TIME_RESERVE_HOURS);
 
   console.log(forСomparison.toString());
+
+  document.getElementById("selected_date_delivery").innerHTML = `${now.toString()}`;
   
   document.getElementById("order_amount").innerHTML = `${forСomparison.toString()}`;
 
