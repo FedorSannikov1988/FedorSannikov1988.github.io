@@ -6,9 +6,9 @@ tg.MainButton.onClick( () => {
 
     localStorage.setItem('delivery_date', []);
 
-    const deliveryData = 'delivery_date:' + yearMonthDay[2] + '.' + yearMonthDay[1] + '.' + yearMonthDay[0];
+    const deliveryData = '"delivery_date":' + '"' + yearMonthDay[2] + '.' + yearMonthDay[1] + '.' + yearMonthDay[0] + '"';
     
-    const deliveryTime = 'delivery_time:' + localStorage.getItem('delivery_time');
+    const deliveryTime = '"delivery_time":' + '"' + localStorage.getItem('delivery_time') + '"';
 
     localStorage.setItem('delivery_time', []);
 
@@ -16,9 +16,11 @@ tg.MainButton.onClick( () => {
     
     localStorageUtil.delAllProducts();
 
-    const shippingCost = 'shipping_cost:' + '150';
+    const shippingCost = '"shipping_cost":' + '150';
 
-    const dateForSent= JSON.stringify(prodictsStore) + shippingCost + deliveryData + deliveryTime;
+    const products = JSON.stringify(prodictsStore);
+
+    const dateForSent = products.substring(0, products.length - 3) + ',' + shippingCost + ',' + deliveryData + ',' + deliveryTime + '}]';
     
     tg.sendData(dateForSent);   
 
