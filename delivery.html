@@ -39,8 +39,12 @@
     </form>
 
     <br>
-    <div class="wrapper_for_error_message centering">
-        <p id="date_and_time_delivery" class="error_message_not_time"></p>
+    <div class="wrapper_for_message_delivery centering">
+        <p id="selected_date_delivery" class="error_message_not_time"></p>
+        <p id="selected_time_delivery" class="error_message_not_time"></p>
+        <p id="order_amount" class="error_message_not_time"></p>
+        <p id="shipping_cost" class="error_message_not_time"></p>       
+
     </div>    
     <br>
 
@@ -49,7 +53,16 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 <!-- Server simulation -->
+<script src="imitation_server/catalog.js"></script>
 <script src="imitation_server/delivery_data_time.js"></script>
+
+<!-- Utils -->
+<script src="utils/localStorageUtil.js"></script>
+<script src="utils/telegram_delivery.js"></script>
+
+<!-- Products 
+<script src="components/Products/Products.js"></script>
+-->
 
 <!-- Forms -->
 <script src="delivery.js"></script>

@@ -9,7 +9,9 @@ const forMax = STOP_DATA;
 /*
 создаем данные для формы type="date" для демонстрационной версии:
 */
+/*
 let tg = window.Telegram.WebApp;
+*/
 
 tg.MainButton.hide();
 
@@ -52,8 +54,8 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
       const maxTimeWorkDelivery = forСomparison.toString().substring(16, 21);
 
       document.getElementById("error_message").innerHTML = `
-      служба доставки прекратила принимать заказы в
-      ${maxTimeWorkDelivery}
+      Служба доставки прекратила принимать заказы в
+      ${maxTimeWorkDelivery}.
       `;
 
     } else {
@@ -64,9 +66,7 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
 
       const selectElement = document.createElement("select");
       selectElement.classList.toggle('select_time_delivery');
-      /*
-      selectElement.class = "select_time_delivery";
-      */
+
       selectElement.name = "list_time";
      
       TIME_DELIVERY.forEach(time => {
@@ -95,9 +95,7 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
 
     const selectElement = document.createElement("select");
     selectElement.classList.toggle('select_time_delivery');
-    /*
-    selectElement.class = "select_time_delivery";
-    */
+
     selectElement.name = "list_time";
 
     TIME_DELIVERY.forEach( time => {
@@ -122,29 +120,53 @@ document.getElementById('form_time_delivery').addEventListener('submit', functio
 
   const formData = new FormData(this);
 
-  const delivery_time = formData.get('list_time');
+  const deliveryTime = formData.get('list_time');
 
-  if (delivery_time !== null) {
+  if (deliveryTime !== null) {
 
-    localStorage.setItem('delivery_time', delivery_time);
+    localStorage.setItem('delivery_time', deliveryTime);
 
-    localStorage.getItem('delivery_time')
+    const yearMonthDay = localStorage.getItem('delivery_date').split('-');
 
-    document.getElementById("date_and_time_delivery").innerHTML = `
-    Дата доставки: ${localStorage.getItem('delivery_date')}
-    Время доставки: ${localStorage.getItem('delivery_time')}
-    Сумма заказа: ${localStorage.getItem('delivery_time')} ₽
+    document.getElementById("selected_date_delivery").innerHTML = `
+    Дата доставки: ${yearMonthDay[2]}.${yearMonthDay[1]}.${yearMonthDay[0]}
     `;
+
+    document.getElementById("selected_time_delivery").innerHTML = `
+    Время доставки: ${localStorage.getItem('delivery_time')}
+    `;
+
+    let full_cost_order = 0;
+
+    const prodictsStore = localStorageUtil.getProducts();
+
+    prodictsStore.forEach(({ id, count }) => {
+
+        let id_prodict_store = id
+
+        CATALOG.forEach(({ id, price }) => {
+
+            if (id == id_prodict_store) {
+
+                full_cost_order += count * price;
+            }
+
+        });
+    });
+
+    const cost_order = 'Стоимость заказать: ' + full_cost_order.toString() + ' ₽';
+
+    document.getElementById("order_amount").innerHTML = `
+    ${cost_order}`;
+
+    document.getElementById("shipping_cost").innerHTML = `
+    Стоимость доставки: 150 ₽`;
     
+    tg.MainButton.setText('Сделать заказ');
     
     tg.MainButton.color = "#4CBB17";
 
     tg.MainButton.show();
-    
-    const text = 'Сделать заказ';
-
-    tg.MainButton.setText(text);
-
   }
 
 });
