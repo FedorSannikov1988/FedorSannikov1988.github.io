@@ -10,9 +10,9 @@
 </head>
 <body>
 
-    <header > 
+    <header> 
         <h1 class="title_delivery centering">
-            <a class="title_delivery_text_link" href="index.html"><b>Вернуться в меню</b></a>
+            <a class="title_delivery_text_link" href="index.html">Вернуться в меню</a>
         </h1>
     </header>
 
@@ -26,7 +26,7 @@
 
     <br>
     <div class="wrapper_for_error_message centering">
-        <p id="error_message" class="error_message_not_time"></p>
+        <p id="error_message" class="error_message_not_time_and_message_delivery"></p>
     </div>
     <br>
 
@@ -40,26 +40,29 @@
 
     <br>
     <div class="wrapper_for_message_delivery centering">
-        <p id="selected_date_delivery" class="error_message_not_time"></p>
-        <p id="selected_time_delivery" class="error_message_not_time"></p>
-        <p id="order_amount" class="error_message_not_time"></p>
-        <p id="shipping_cost" class="error_message_not_time"></p>
+        <p id="selected_date_delivery" class="error_message_not_time_and_message_delivery"></p>
+        <p id="selected_time_delivery" class="error_message_not_time_and_message_delivery"></p>
+        <p id="order_amount" class="error_message_not_time_and_message_delivery"></p>
+        <p id="shipping_cost" class="error_message_not_time_and_message_delivery"></p>
     </div>    
     <br>
 
-<!-- Telegram WebApp -->
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Telegram WebApp -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-<!-- Server simulation -->
-<script src="imitation_server/catalog.js"></script>
-<script src="imitation_server/delivery_data_time.js"></script>
+    <!-- Server simulation -->
+    <script src="imitation_server/catalog.js"></script>
+    <script src="imitation_server/delivery_data_time.js"></script>
 
-<!-- Utils -->
-<script src="utils/localStorageUtil.js"></script>
-<script src="utils/telegram_delivery.js"></script>
+    <!-- Utils -->
+    <script src="utils/localStorageUtil.js"></script>
+    <script src="utils/telegram_delivery.js"></script>
 
-<!-- Forms -->
-<script src="delivery.js"></script>
+    <!-- Header -->
+    <link rel="stylesheet" href="components/Header/Header_delivery.css">
+
+    <!-- Forms -->
+    <script src="delivery.js"></script>
 
 </body>
 </html>

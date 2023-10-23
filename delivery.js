@@ -14,7 +14,7 @@ const forMax = STOP_DATA;
 */
 tg.MainButton.hide();
 
-const TIMERESERVEHOURS = 2;
+const TIME_RESERVE_HOURS = 2;
 
 const dateForFormDateDelivery = new Date(Date.now());
 const forValueAndMin = dateForFormDateDelivery.toISOString().substring(0, 10);
@@ -42,11 +42,11 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
   const forСomparison = new Date(now.getFullYear(), now.getMonth(), now.getDate(), max_time_and_date[0], max_time_and_date[1], 0);
   const nearestDeliveryTime = new Date();
 
-  nearestDeliveryTime.setHours(now.getHours() + TIMERESERVEHOURS);
+  nearestDeliveryTime.setHours(now.getHours() + TIME_RESERVE_HOURS);
 
     if (forСomparison <= nearestDeliveryTime) {
 
-      forСomparison.setHours(forСomparison.getHours() - TIMERESERVEHOURS);
+      forСomparison.setHours(forСomparison.getHours() - TIME_RESERVE_HOURS);
 
       const maxTimeWorkDelivery = forСomparison.toString().substring(16, 21);
 
@@ -57,7 +57,7 @@ document.getElementById('form_date_delivery').addEventListener('submit', functio
 
     } else {
             
-      forСomparison.setHours(forСomparison.getHours() - TIMERESERVEHOURS);
+      forСomparison.setHours(forСomparison.getHours() - TIME_RESERVE_HOURS);
       
       const now = new Date();
 

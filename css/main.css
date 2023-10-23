@@ -1,5 +1,5 @@
 :root {
-    --color-light: #f8f9fa;
+    --color-light: #ebebeb;
     --color-white: #fff;
     --color-unaccent: #808080;
 
@@ -17,6 +17,7 @@
     --text-size-delivery: 20px;
     --border-radius-input-date-and-time: 10px;
     --indent-down-elements-form: 15px;
+    --padding-input-date-and-select_time_delivery:10px;
 }
 
 * {

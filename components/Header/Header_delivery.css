@@ -1,0 +1,17 @@
+.title_delivery {
+    display: flex;
+    font-size: var(--text-size-delivery);
+    height: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title_delivery_text_link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .title_delivery_text_link:active {
+    color: crimson;
+  }

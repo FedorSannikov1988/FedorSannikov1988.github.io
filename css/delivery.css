@@ -1,26 +1,9 @@
-.title_delivery {
-  display: flex;
-  font-size: var(--text-size-delivery);
-  height: 50px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.title_delivery_text_link {
-  text-decoration: none;
-  color: black;
-}
-
-.title_delivery_text_link:active {
-  color: crimson;
-}
-
 .form {
   border: 0; 
   box-shadow: var(--box-shadow);
   padding: 15px;
   width: 330px;
+  background-color: var(--color-white);
 }
 
 .wrapper_for_form {
@@ -37,11 +20,20 @@
 }
 
 .input_date {
-  padding:10px;
+  padding: var(--padding-input-date-and-select_time_delivery);
   border-radius: var(--border-radius-input-date-and-time);
   font-size: var(--text-size-delivery);
   margin-bottom: var(--indent-down-elements-form);
   text-align: center;
+}
+
+.select_time_delivery {
+  padding: var(--padding-input-date-and-select_time_delivery);
+  width: 150px;
+  font-size: var(--text-size-delivery);
+  margin-bottom: var(--indent-down-elements-form);
+  text-align: center;
+  border-radius: var(--border-radius-input-date-and-time);
 }
 
 .button_for_form_delivery {
@@ -59,21 +51,14 @@
   background: rgb(51, 180, 8);
 }
 
-.select_time_delivery {
-  width: 150px;
-  font-size: var(--text-size-delivery);
-  margin-bottom: var(--indent-down-elements-form);
-  text-align: center;
-  padding:10px;
-  border-radius: var(--border-radius-input-date-and-time);
-}
+
 
 .wrapper_for_error_message {
   display: flex;
   width: 330px;
 }
 
-.error_message_not_time {
+.error_message_not_time_and_message_delivery {
   color: crimson;
   text-align: center;
   font-size: var(--text-size-delivery);
