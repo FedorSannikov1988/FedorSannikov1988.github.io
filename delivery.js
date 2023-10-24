@@ -2,7 +2,7 @@
 Almost the entire script below is an imitation of 
 receiving a delivery schedule from a third-party 
 service and was written for the demo version of 
-the application
+the application.
 */
 
 tg.MainButton.hide();
@@ -18,8 +18,8 @@ const forMax = STOP_DATA;
 */
 
 /* 
-or you can do this to simulate the work (request for the date 
-and time of delivery from the server)
+Or you can do this to simulate the work (request for the date 
+and time of delivery from the server).
 */
 
 function createDateInDesiredFormat(dateForFormDateDelivery) {
