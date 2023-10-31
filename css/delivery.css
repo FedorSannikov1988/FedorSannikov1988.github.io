@@ -2,7 +2,7 @@
   border: 0; 
   box-shadow: var(--box-shadow);
   padding: 15px;
-  width: 330px;
+  width: 300px;
   background-color: var(--color-white);
 }
 
@@ -50,8 +50,6 @@
 .button_for_form_delivery:active {
   background: rgb(51, 180, 8);
 }
-
-
 
 .wrapper_for_error_message {
   display: flex;

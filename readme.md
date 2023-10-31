@@ -11,6 +11,15 @@
 **[{"id":"el1","count":1},{"id":"el2","count":3},{"shipping_cost":150,"delivery_date":"23.10.2023","delivery_time":"9:00"}]**) о заказе (какие блюда заказаны и из количество в заказе; дата, время 
 и стоимость доставки).
 
+### Оформление:
+Для удобного визуального отображения index.html (меню готовых блюд) 
+проект дополнен следующими мадиазапросами:
+- @media screen and (max-width: 1023px)
+- @media screen and (max-width: 767px)
+- @media screen and (max-width: 425px)
+- @media screen and (max-width: 375px)
+- @media screen and (max-width: 320px)
+
 ### Технологии и инструменты:
 - Язык программирования: JavaScript ;
 - Технологий: HTML (язык гипертекстовой разметки документов)/CSS(каскадные таблицы стилей); 
