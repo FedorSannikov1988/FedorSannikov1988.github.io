@@ -47,6 +47,6 @@
 - <a href="https://fedorsannikov1988.github.io/delivery.html">delivery</a>;
 - <a href="https://github.com/FedorSannikov1988/delivery_service">Telegram-bot</a> в котором используется данный каталог.
 
-Примечание: В данном репозитории размещена еще одна страничка <a href="https://fedorsannikov1988.github.io/clothing-store.html">clothing-store</a> интернет магазина одежды не имеющая к описанному выше проету отношения. 
+## Примечание: В данном репозитории размещена еще одна страничка <a href="https://fedorsannikov1988.github.io/clothing-store.html">clothing-store</a> интернет магазина одежды не имеющая к описанному выше проету отношения. 
 
 <a href="https://fedorsannikov1988.github.io/clothing-store.html">clothing-store</a> демонстрирует скромные навыки в области верстки.
