@@ -106,11 +106,17 @@
 
 .header_icon_list_link:hover ~ .header_icon_list__drop-down-menu {
     display: block;
-    z-index: 2;
+    z-index: 3;
 }
 
 .drop-down-menu__point-link {
     text-decoration: none;
+    color: #6F6E6E;
+    font-family: "Lato-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .wrapper_for_header_icon_shopping_cart {
@@ -220,6 +226,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 
 .text_product_categories_first_line {
