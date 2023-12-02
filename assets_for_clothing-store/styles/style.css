@@ -215,6 +215,10 @@
     cursor: pointer;
 }
 
+.product_categories_section:hover .container_for_text_product_categories {
+    display: none;
+}
+
 .container_for_text_product_categories {
     display: flex;
     position: absolute;
@@ -249,10 +253,6 @@
     width: 317%;
 }
 
-.container_for_text_product_categories:hover {
-    display: none;
-}
-
 .header_for_featured_items {
     display: flex;
     flex-direction: column;
@@ -285,7 +285,6 @@
     grid-column-gap: 30px;
     grid-row-gap: 25px;
     padding-bottom: 48px;
-
 }
 
 .one_big_cards {
@@ -297,7 +296,6 @@
     flex-direction: column;
     height: 113px;
     padding: 24px 16px;
-
 }
 
 .one_big_cards_title {
